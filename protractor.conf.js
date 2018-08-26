@@ -15,17 +15,12 @@ exports.config = {
   specs: [
     './test.js'
   ],
-  exclude: [
-  ],
-  maxInstances: 10,
-  capabilities: [{
+  capabilities: {
     maxInstances: 5,
     browserName: 'chrome'
-  }],
+  },
+  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
   baseUrl: 'http://www.google.com',
-  waitforTimeout: 10000,
-  connectionRetryTimeout: 90000,
-  connectionRetryCount: 3,
   framework: 'jasmine',
   jasmineNodeOpts: {
     defaultTimeoutInterval: 10000,
